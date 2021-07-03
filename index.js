@@ -25,6 +25,8 @@ document.querySelector('#libraryForm').addEventListener('submit', (e) => {
         image_url: e.target.image_url.value
     }
 
+    document.querySelector('#libraryForm').reset();
+
     renderLibraryCard(newCard)
 
 })
