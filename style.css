@@ -56,7 +56,6 @@
 
   #leftMenu h1{
     font-size: 30px;
-    font-weight: lighter;
   }
 
   #parent {
@@ -91,7 +90,7 @@
     color: white;
     padding: 2rem;
     font-size: 30px;
-    font-weight: lighter;
+    font-weight: 900px;
   }
 
 
@@ -109,7 +108,7 @@
     background-color:#759794;
     padding: 10px;
     margin-bottom: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
     border-radius: 10px;
     width: 30%;
     height: 100%;
