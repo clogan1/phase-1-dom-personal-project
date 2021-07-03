@@ -81,8 +81,18 @@
 
   #cardsDiv {
     width: 50%;
+   
   }
 
+  #library {
+    overflow: scroll;
+    max-height: 635px;
+  }
+
+  #watchList {
+    overflow: scroll;
+    max-height: 600px;
+  }
 
   /* watchlist container */
 
