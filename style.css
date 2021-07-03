@@ -1,0 +1,212 @@
+/* mini reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  /* layout */
+  body {
+    font-family: "Montserrat";
+    color: #000;
+    font-size: 14px;
+    transition: all 0.2s;
+    background-color: #f1f1f1;
+    height: 100%;
+    font-weight: 100;
+  }
+
+  html, body {
+    height: 100%;
+  }
+  h1{
+    font-size: 50px;
+    font-family: 'Shrikhand';
+    text-shadow: 2px 2px #759794;
+  }
+
+  h3 {
+    font-weight: bolder;
+    font-size: 20px;
+    
+  }
+
+  #placeholder {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.6;
+    background-color:#9BC9C6;
+    padding: 20px;
+    border-radius: 10px;
+
+
+  }
+  #leftMenu {
+    background-color:#bdc2c1;
+    color: #fff;
+    padding: 2rem;
+    font-size: 20px;
+    width: 10%;
+    height: 100%;
+    border-radius: 10px;
+    height: 100%;
+    text-align: center;
+  }
+
+  #leftMenu h1{
+    font-size: 30px;
+    font-weight: lighter;
+  }
+
+  #parent {
+    height: 100%;
+  }
+
+  #profilePicture {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    text-align: center;
+  }
+
+  #parent .listDiv {
+    float:left;
+    padding: 10px;
+    margin: 10px;
+    /*display: flex;*/
+    flex-direction: row-reverse;
+    height: 100%;
+    font-weight: bold;
+  }
+
+  #cardsDiv {
+    width: 50%;
+  }
+
+
+  /* watchlist container */
+
+  #parent h2 {
+    color: white;
+    padding: 2rem;
+    font-size: 30px;
+    font-weight: lighter;
+  }
+
+
+  .cardDiv {
+    background-color:#759794;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+  }
+
+ 
+
+  /* library form container */
+  #libraryFormDiv {
+    background-color:#759794;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+  }
+
+
+  /* menu */
+  #menu {
+    padding: 1rem;
+    background-color: #214F4B;
+    color: #fff;
+  }
+  
+  /* forms */
+  #libraryForm {
+    margin: 0 auto;
+    max-width: 300px;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 10px
+  }
+  
+  #libraryForm input,
+  #libraryForm textarea {
+    width: 100%;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #libraryForm input[type="submit"] {
+    margin: 1em 0 0 0;
+    width: auto;
+  }
+  
+  /* cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .card {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    background-color: #fff;
+    animation: enter 0.25s ease-out;
+    box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.75);
+    padding: 5%;
+    border-radius: 10px;
+  }
+
+  .card img {
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .card .content {
+    padding: 1rem 0.5rem;
+  }
+  
+  .card .buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+  
+  /* buttons */
+  button {
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-size: 0.8rem;
+    font-weight:900;
+    padding: 0.75em 1.5em;
+    background-color: #214F4B;
+    color: #fff;
+    transition: opacity 0.2s ease;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+  #addButton {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 10px;
+    margin: 5px;
+
+  }
+  

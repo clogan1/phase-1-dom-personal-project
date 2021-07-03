@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script defer src="data.js"></script>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shrikhand|Montserrat"/>
+    <title>Streaming Bestie</title>
+  </head>
+  <body>
+    <header id="menu">
+      <h1>Streaming Bestie</h1>
+    </header>
+
+   <!-- <aside>
+      <img id="profilePicture">
+      <h3 id="username">username</h1> -->
+      <!-- extra if you have time to make this work <div id="watchlistCount">watchlist (#)</div> --> 
+   <!-- </aside> -->
+
+    <!-- <div class="container"> -->
+
+        <div id="parent">
+
+          <div id="leftMenu" class="listDiv">
+            <img id="profilePicture">
+            <h3 id="username">username</h1>
+            <!-- extra if you have time to make this work <div id="watchlistCount">watchlist (#)</div> --> 
+          </div>
+
+          <div id="cardsDiv" class="listDiv">
+
+            <div id="watchList" class="cardDiv">
+              <h2>Watch List</h2>
+                <ul id="watchListUl" class="cards">
+                  <li id=placeholder>
+                    <p>+ Add shows from the Library</p>
+                  </li>
+  
+                </ul>
+  
+            </div>
+  
+            <div id="library" class="cardDiv">
+              <h2>Library</h2>
+  
+              <ul id="libraryList" class="cards">
+            
+              </ul>
+  
+            </div>
+          </div>
+
+          
+
+          <div id="libraryFormDiv" class="listDiv">
+            <h2>Add to Watch List</h2>
+            <form id="libraryForm">
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title"/>
+
+             <!-- <label for="actors">Actors:</label> 
+              <input type="text" id="actors" name="actors"/> -->
+
+              <label for="years">Years:</label>
+              <input type="text" id="years" name="years"/>
+
+              <label for="seasons">Seasons:</label>
+              <input type="text" id="seasons" name="seasons"/>
+
+              <label for="episodes">Episodes:</label>
+              <input type="text" id="episodes" name="episodes"/>
+
+              <label for="runningTime">Running Time:</label>
+              <input type="text" id="runningTime" name="runningTime"/>
+
+              <label for="streaming">Streaming:</label>
+              <input type="text" id="streaming" name="streaming"/>
+
+              <label for="image_url">Image URL:</label>
+              <input type="text" id="image_url" name="image_url"/>
+
+              <button type="submit">Add to Watch List</button>
+
+        
+
+            </form>
+
+
+
+          </div>
+
+        </div>
+
+
+     
+
+    <!-- </div> -->
+  </body>
+</html>
