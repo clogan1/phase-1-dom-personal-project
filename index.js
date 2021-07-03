@@ -73,8 +73,10 @@ function renderLibraryCard(card){
         watchListUl.append(li)
         cardButton.textContent = '-'
             cardButton.addEventListener('click', (e) => {
-                document.querySelector("#libraryList").append(li)
-                cardButton.textContent = '+'
+                if (confirm("Are you sure you want to remove this from your Watch List?")){
+                    document.querySelector("#libraryList").append(li)
+                    cardButton.textContent = '+'
+                }
             })
         document.querySelector('#placeholder').remove()
     })
