@@ -97,5 +97,32 @@ function initialRender() {
     asideRender();
     allData.library.forEach(renderLibraryCard)
 
+    //WL minimizer
+    // const wLminMaxBtn = document.querySelector('#wLminMaxButton')
+    // wLminMaxBtn.addEventListener('click', (e) => {
+    //     wLminMaxBtn.textContent = '+'
+    //     document.querySelector('#watchListUl').style.maxHeight = 0;
+
+    //         wLminMaxBtn.addEventListener('click', (e) => {
+    //             document.querySelector('#watchListUl').style.maxHeight = "600 px";
+    //             wLminMaxBtn.textContent = '-';
+
+    //         })
+
+
+    // })
+
+    // //Lib minimizer
+    // const libminMaxButton = document.querySelector('#libminMaxButton')
+    // libminMaxButton.addEventListener('click', (e) => {
+    //     libminMaxButton.textContent = '+'
+    //     document.querySelector('#libraryList').style.height = 0;
+    // })
+
 }
 initialRender()
+
+
+
+//If (-) at top of Watch List or Library div is clicked, minimizes (or toggles Ul) + changes the (-) to a (+)
+//If (+) aat top of Watch List or Library div is clicked, maximizes (or toggles Ul) + changes the (+) to a (-)
