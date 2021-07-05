@@ -59,29 +59,6 @@ function renderLibraryCard(card){
     li.append(img, h3Title, pYear, pEpisodes, pStreaming, cardButton);
     document.querySelector("#libraryList").append(li)
 
-    //move card to watchlist when "+" is clicked ; once in Watch List + --> -; if - is clicked, goes back down to library
-    //could play with adding an "archived section"
-    //need to figure out how to loop this activity
-
-    cardButton.addEventListener('click', (e) => {
-        watchListUl.append(li)
-        cardButton.textContent = '-'
-            cardButton.addEventListener('click', (e) => {
-                if (confirm("Are you sure you want to remove this from your Watch List?")){
-                    document.querySelector("#libraryList").append(li)
-                    cardButton.textContent = '+'
-                }
-            })
-        document.querySelector('#placeholder').remove()
-
-    })
-
-
-    //Hover over card and get bold black background  - couldn't get to work
-    // li.addEventListener('mouseover', (e) => {
-    //     li.style.borderColor = 'black';
-    //     li.style.borderWidth = '50px';
-    // })
 
 }
 
@@ -99,25 +76,30 @@ function initialRender() {
 
     // //Event listener for adding card from Library to Watch List
 
-    // document.querySelectorAll("#library .addButton").forEach(btn => {
-    //     btn.addEventListener('click', (e) => {
-    //         btn.textContent = '-'
-    //         btn.className = "removeButton"
-    //         document.querySelector('#watchListUl').append(btn.closest("li"))
-    //         //document.querySelector('#placeholder').remove()
-    //     })
-    // })
+    document.querySelectorAll("#library .addButton").forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            btn.textContent = '-'
+            //btn.className = "removeButton"
+            let card = btn.closest("li")
+            document.querySelector('#watchListUl').append(card)
+                btn.addEventListener('click', (e) => {
+                    if (confirm("Are you sure you want to remove this from your Watch List?")){
+                        document.querySelector("#libraryList").append(card)
+                        btn.textContent = '+'
+                    }
+                })
+           document.querySelector('#placeholder').remove()
+        })
+    })
 
-    // //Event listener for removing card from Watch List to Library
-    // document.querySelectorAll("#watchListUl .removeButton").forEach(btn => {
-    //     btn.addEventListener('click', (e) => {
-    //         btn.textContent = '+'
-    //         //console.log(btn.closest("li"))
-    //         btn.className = "addButton"
-    //         document.querySelector('#libraryList').append(btn.closest("li"))
-    //     })
-    // })
-    
+
+    //Hover over card and get bold black background  - couldn't get to work
+    document.querySelectorAll('#library li .card').forEach(card => {
+        card.addEventListener('mouseover', (e) => {
+            card.style.borderColor = 'red';
+            card.style.borderWidth = '10px';
+        })
+    })
 
 
   
@@ -146,4 +128,52 @@ function initialRender() {
     // })
 
 }
+
 initialRender()
+
+
+
+
+
+//old notes / code to Delete
+
+//move card to watchlist when "+" is clicked ; once in Watch List + --> -; if - is clicked, goes back down to library
+    //could play with adding an "archived section"
+    //need to figure out how to loop this activity
+
+    // cardButton.addEventListener('click', (e) => {
+    //     watchListUl.append(li)
+    //     cardButton.textContent = '-'
+    //         cardButton.addEventListener('click', (e) => {
+    //             if (confirm("Are you sure you want to remove this from your Watch List?")){
+    //                 document.querySelector("#libraryList").append(li)
+    //                 cardButton.textContent = '+'
+    //             }
+    //         })
+    //     document.querySelector('#placeholder').remove()
+
+    // })
+
+     // //Event listener for removing card from Watch List to Library
+    // document.querySelectorAll("#watchListUl .removeButton").forEach(btn => {
+    //     btn.addEventListener('click', (e) => {
+    //         btn.textContent = '+'
+    //         //console.log(btn.closest("li"))
+    //         btn.className = "addButton"
+    //         document.querySelector('#libraryList').append(btn.closest("li"))
+    //     })
+    // })
+    
+
+
+   
+    // if (document.querySelectorAll('#watchListUl .card').length === 0){
+    //     let li = document.createElement('li')
+    //     let pText = document.createElement('p')
+
+    //     li.id = "placeholder"
+    //     pText.textContent = "+ Add shows from the Library"
+
+    //     li.append(pText);
+    //     document.querySelector('#watchListUl').append(li);
+    // } 
