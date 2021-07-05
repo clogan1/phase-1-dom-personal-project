@@ -53,7 +53,7 @@ function renderLibraryCard(card){
     pEpisodes.textContent = `Seasons: ${card.seasons}  |  Episodes: ${card.episodes}  |  Run Time: ${card.runningTime}`
     pStreaming = `Streaming: ${card.streaming}`
     cardButton.textContent = "+"
-    cardButton.id="addButton"
+    cardButton.className="addButton"
 
     //appending new elements so they appear in the DOM
     li.append(img, h3Title, pYear, pEpisodes, pStreaming, cardButton);
@@ -76,7 +76,13 @@ function renderLibraryCard(card){
 
     })
 
-   
+
+    //Hover over card and get bold black background  - couldn't get to work
+    // li.addEventListener('mouseover', (e) => {
+    //     li.style.borderColor = 'black';
+    //     li.style.borderWidth = '50px';
+    // })
+
 }
 
 
@@ -88,12 +94,35 @@ function initialRender() {
     asideRender();
     allData.library.forEach(renderLibraryCard);
 
-    //Hover over card and get bold black background
-    // document.querySelector("li .card").addEventListener('mouseenter', (e) => {
-    //     document.querySelector("li .card").style.borderColor = 'black';
-    //     document.querySelector("li .card").style.borderWidth = '20px';
+
+  
+
+    // //Event listener for adding card from Library to Watch List
+
+    // document.querySelectorAll("#library .addButton").forEach(btn => {
+    //     btn.addEventListener('click', (e) => {
+    //         btn.textContent = '-'
+    //         btn.className = "removeButton"
+    //         document.querySelector('#watchListUl').append(btn.closest("li"))
+    //         //document.querySelector('#placeholder').remove()
+    //     })
     // })
 
+    // //Event listener for removing card from Watch List to Library
+    // document.querySelectorAll("#watchListUl .removeButton").forEach(btn => {
+    //     btn.addEventListener('click', (e) => {
+    //         btn.textContent = '+'
+    //         //console.log(btn.closest("li"))
+    //         btn.className = "addButton"
+    //         document.querySelector('#libraryList').append(btn.closest("li"))
+    //     })
+    // })
+    
+
+
+  
+    //If (-) at top of Watch List or Library div is clicked, minimizes (or toggles Ul) + changes the (-) to a (+)
+    //If (+) aat top of Watch List or Library div is clicked, maximizes (or toggles Ul) + changes the (+) to a (-)
     //WL minimizer
     // const wLminMaxBtn = document.querySelector('#wLminMaxButton')
     // wLminMaxBtn.addEventListener('click', (e) => {
@@ -118,8 +147,3 @@ function initialRender() {
 
 }
 initialRender()
-
-
-
-//If (-) at top of Watch List or Library div is clicked, minimizes (or toggles Ul) + changes the (-) to a (+)
-//If (+) aat top of Watch List or Library div is clicked, maximizes (or toggles Ul) + changes the (+) to a (-)

@@ -222,7 +222,7 @@
     opacity: 0.8;
   }
 
-  #addButton {
+  .addButton {
     font-size: 20px;
     width: 30px;
     height: 30px;
@@ -233,3 +233,14 @@
 
   }
   
+
+  .removeButton {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 10px;
+    margin: 5px;
+
+  }
