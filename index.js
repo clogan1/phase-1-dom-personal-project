@@ -1,11 +1,3 @@
-//Notes
-//initial render
-//function for populating aside with username + image
-//function for populating library with cards
-//event to click on library card to move from library to watchlist
-//(extra) update watchlist count under user name
-//alphabetize cards based on title
-
 
 
 //adding new shows once form submits
@@ -69,6 +61,8 @@ function renderLibraryCard(card){
 
     //move card to watchlist when "+" is clicked ; once in Watch List + --> -; if - is clicked, goes back down to library
     //could play with adding an "archived section"
+    //need to figure out how to loop this activity
+
     cardButton.addEventListener('click', (e) => {
         watchListUl.append(li)
         cardButton.textContent = '-'
@@ -79,13 +73,10 @@ function renderLibraryCard(card){
                 }
             })
         document.querySelector('#placeholder').remove()
+
     })
 
-    //need to work on getting this functionality to work
-    li.addEventListener('mouseover', (e) => {
-        li.style.borderColor = 'black';
-        li.style.borderWidth = '10px'
-    })
+   
 }
 
 
@@ -95,7 +86,13 @@ function renderLibraryCard(card){
 function initialRender() {
     //console.log(allData);
     asideRender();
-    allData.library.forEach(renderLibraryCard)
+    allData.library.forEach(renderLibraryCard);
+
+    //Hover over card and get bold black background
+    // document.querySelector("li .card").addEventListener('mouseenter', (e) => {
+    //     document.querySelector("li .card").style.borderColor = 'black';
+    //     document.querySelector("li .card").style.borderWidth = '20px';
+    // })
 
     //WL minimizer
     // const wLminMaxBtn = document.querySelector('#wLminMaxButton')
