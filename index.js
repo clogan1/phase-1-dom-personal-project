@@ -21,6 +21,22 @@ document.querySelector('#libraryForm').addEventListener('submit', (e) => {
 
     renderLibraryCard(newCard)
 
+    //adding button functionality
+    document.querySelectorAll("#library .addButton").forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            btn.textContent = '-'
+            //btn.className = "removeButton"
+            let card = btn.closest("li")
+            document.querySelector('#watchListUl').append(card)
+                btn.addEventListener('click', (e) => {
+                    if (confirm("Are you sure you want to remove this from your Watch List?")){
+                        document.querySelector("#libraryList").append(card)
+                        btn.textContent = '+'
+                    }
+                })
+        })
+    })
+
 })
 
 //Aside Render
@@ -128,8 +144,8 @@ function initialRender() {
     // })
 
 }
-
 initialRender()
+
 
 
 
